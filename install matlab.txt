@@ -1,0 +1,32 @@
+//installation of libraries
+
+sudo dnf install libxcrypt-compat libxcrypt
+
+
+//installation of matlab
+
+cd Downloads/matlab_RXXXXx_glnxa64
+export LD_PRELOAD=/usr/lib64/libfreetype.so.6
+./install
+
+
+//fix opengl errors
+
+echo "-Djogl.disable.openglarbcontext=1" >> $MATLAB_DIR/bin/glnxa64/java.opts
+
+
+//Add shortcut
+
+create a matlab.desktop file
+//write inside the following
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=env LD_PRELOAD="/usr/lib64/libstdc++.so.6 /usr/lib64/libfreetype.so.6" LD_LIBRARY_PATH=/usr/lib/dri/ /$MATLAB_DIR/bin/matlab -desktop
+Name=Matlab
+ICON=$MATLAB_DIR/bin/glnxa64/cef_resources/matlab_icon.png
+Categories=Development;Math;Science
+Comment=Scientific computing environment
+StartupNotify=true
+
+//$MATLAB_DIR should be something like home/usr_name/matlab/XXXXx
