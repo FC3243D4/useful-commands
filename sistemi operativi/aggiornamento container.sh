@@ -5,8 +5,8 @@ test "$IN_TERM" || {
     exit 0
 } && true
 
-sudo docker container stop os2425
-sudo docker container rm os2425
-sudo docker image pull os2425
-sudo docker container run --name os2425 --hostname sistemi-operativi -v dati:/corso -it chmod84/os2425
+docker container stop os2425
+docker container rm os2425
+docker image pull chmod84/os2425
+docker container run --name os2425 --hostname sistemi-operativi -v dati:/home/corso -it chmod84/os2425
 kill -9 $PPID

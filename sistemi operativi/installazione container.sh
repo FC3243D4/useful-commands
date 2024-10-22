@@ -5,4 +5,4 @@ test "$IN_TERM" || {
     exit 0
 } && true
 
-docker container run --name os2425 --hostname sistemi-operativi -v dati:/corso -it chmod84/os2425 && kill -9 $PPID
+docker container run --name os2425 --hostname sistemi-operativi -v dati:/home/corso -it chmod84/os2425 && kill -9 $PPID

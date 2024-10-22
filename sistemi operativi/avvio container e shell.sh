@@ -6,5 +6,4 @@ test "$IN_TERM" || {
 } && true
 
 docker container start os2425
-docker container exec -it os2425 /bin/bash
-kill -9 $PPID
+docker container exec -it os2425 /bin/bash && kill -9 $PPID
