@@ -1,3 +1,21 @@
+inserire all'interno della cartella del tema che si trova all'interno della vostra cartella /boot/grub2/theme le icone per le classi submenu e recovery se non già presenti, potete cercare su internet le icone che più preferite
+
+eseguire uno degli script per l'update di grub
+
+all'apertura di grub customizer personalizzare l'ordine come più preferite, la mia configurazione di default usando fedora 41 con un solo kernel precedente a quello in uso è la seguente
+
+    Fedora 41
+    Windows
+    Advanced
+        Fedroa 41 (INSERT-OLD-KERNEL-NUMBER)
+        Rescue
+    UEFI firmware
+
+dove advanced è un submenu
+premere save e poi chiudere la finestra
+
+le istruzioni procederanno asusmendo che la vostra configurazione sia analoga
+
 quando si apre la schermata di nano scendere fino alla sezione per il submenu e aggiungere
 
 --class submenu
