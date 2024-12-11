@@ -5,4 +5,8 @@ test "$IN_TERM" || {
     exit 0
 } && true
 
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg && kill -9 $PPID
+sudo grub-customizer
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo sed -i -e "s/'UEFI Firmware Settings'/'BIOS' --class uefi-firmware/" "/boot/grub2/grub.cfg"
+sudo nano /boot/grub2/grub.cfg
+kill -9 $PPID

@@ -1,0 +1,20 @@
+quando si apre la schermata di nano scendere fino alla sezione per il submenu e aggiungere
+
+--class submenu
+
+prima dell'apertura della graffa e cambiare
+
+-- class fedora
+
+a
+
+--class recovery
+
+per il fedora rescue
+
+dopo di che per salvare fare
+
+CTRL + O
+ENTER
+CTRL + X
+ENTER
