@@ -1,0 +1,26 @@
+per inserire un tema di grub:
+
+- scaricarne uno dal sito che si preferisce
+- inserirlo nella cartella "/boot/grub2/theme" copiando la cartella estratta del temaal suo interno nel modo che preferite
+- eseguire lo script "inserimento tema grub.sh"
+- all'interno del file testuale che verrà aperto nel terminale e commentate la seguente linea
+
+  GRUB_TERMINAL_OUTPUT=console
+
+  mettendogli davanti un cancelletto in questo modo
+
+  #GRUB_TERMINAL_OUTPUT=console
+
+  e aggiungere in fondo una linea che segua questo schema sostituendo a "INSERT-THEME" il nome della cartella che avete copiato nella cartella "/boot/grub2/theme"
+
+  GRUB_THEME="/boot/grub2/theme/INSERT-THEME/theme.txt"
+
+- ultimo step opzionale ma altamente raccomandato se intendete usare grub customizer è cambiare la seguente linea
+
+  GRUB_ENABLE_BLSCFG="true"
+
+  settandola a "false" così
+
+  GRUB_ENABLE_BLSCFG="false"
+
+  questo risolverà il problema che causa la mancata comparsa delle istanze di linux in grub customizer
