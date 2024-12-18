@@ -5,7 +5,7 @@ test "$IN_TERM" || {
     exit 0
 } && true
 
-sudo dnf update > check-kernel.temp
+sudo dnf update 2>&1 | tee check-kernel.temp
 
 if grep -q "kernel-core" "check-kernel.temp"; then
     sudo grub-customizer
