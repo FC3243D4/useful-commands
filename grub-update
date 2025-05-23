@@ -1,0 +1,8 @@
+#!/bin/bash
+
+grub-customizer
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+#sudo sed -i -e "s/'UEFI Firmware Settings'/'BIOS' --class bios/g" /boot/grub/grub.cfg
+sudo sed -i -e 's/"Advanced options for Arch Linux"/"Advanced options for Arch Linux" --class submenu/g' /boot/grub/grub.cfg
+sudo nano /boot/grub/grub.cfg
+kill -9 $PPID
