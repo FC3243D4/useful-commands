@@ -6,7 +6,7 @@ test "$IN_TERM" || {
 } && true
 
 sudo rpm --import "https://miktex.org/download/key"
-sudo curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
+sudo curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/41/miktex.repo
 sudo dnf install texlive-scheme-full texlive-chktex LaTeXML lyx python3-pylatex miktex && kill -9 $PPID
 
 
